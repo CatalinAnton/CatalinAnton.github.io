@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Color Blender</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Color Blender. </h1>
+
+<div class="wrapper">
+	<div class="color-box movable" id="box1"></div>
+	<div class="color-box movable" id="box2"></div>
+	<div class="color-box" id="newcol"></div>
+</div>
+<div class="wrapper">
+	<div class="color-box wiggle" id="choice1" onclick="chosen('choice1')"></div>
+	<div class="color-box wiggle" id="choice2" onclick="chosen('choice2')"></div>
+	<div class="color-box wiggle" id="choice3" onclick="chosen('choice3')"></div>
+</div>
+<div class="wrapper">
+	<!-- <div class="mybutton white" onclick="refreshColors()">Refresh</div> -->
+	<div class="mybutton white" onclick="refreshColors()">Next</div>
+</div>
+<div class="display-none " id="congratsDiv">
+	<h2>Bravo, tu :D</h2>
+</div>
+<!-- <div class="credits"> Made by Cata</div> -->
+<script type="text/javascript" src="back.js"></script>
+<!-- 
+<form >
+  Select your favorite color:
+  <input type="color" name="favcolor" value="#ff0000">
+  <input type="submit">
+</form> -->
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+    @font-face {
+    font-family: 'Roboto';
+    src: url('/font-face/Regular/Roboto-Regular.eot'); /* IE9 Compat Modes */
+    src: url('/font-face/Regular/Roboto-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/font-face/Regular/Roboto-Regularo.svg#svgFontName') format('svg'); /* Legacy iOS */
+    }
+
+
+   body  { font-family: 'Roboto', sans-serif;
+
+   		   /*background-color:rgb(0,0,0,0.1);*/
+   	 }
+* {
+	margin:0;
+	padding:0;
+}
+/* Styles, not important */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+h2 {
+  font-weight: normal;
+  font-size:10vw;
+}
+
+.color-box{
+	width:200px;
+	height:200px;
+	margin:20px;
+	display:inline-block;
+	position:relative;
+	/*border:12px solid rgba(60,60,60,0.4);*/
+}
+
+.movable{
+	-webkit-transition:margin 1s;
+    transition:margin 1s;
+}
+.wrapper{
+	position:relative;
+	display:flex;
+	justify-content:center;
+}
+
+#box3{
+	border:2 px solid green;
+}
+h1{
+	text-align:center;
+	color:gray;
+}
+#newcol{
+	display:none;
+}
+
+.mybutton {
+  position: relative;
+
+  display: block;
+  margin: 20px;
+  padding: 0;
+
+  overflow: hidden;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  
+  background-color: #2ecc71;
+  color: rgb(128,128,128);
+  
+  transition: background-color .3s;
+  cursor:pointer;
+  width:200px;
+  height:36px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.mybutton:hover, .mybutton:focus {
+  background-color: #27ae60;
+}
+
+.mybutton > * {
+  position: relative;
+}
+
+.mybutton span {
+  display: block;
+  padding: 12px 24px;
+}
+
+.mybutton:before {
+  content: "";
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  display: block;
+  width: 0;
+  padding-top: 0;
+    
+  border-radius: 100%;
+  
+  background-color: rgba(236, 240, 241, .3);
+  
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.mybutton:active:before {
+  width: 120%;
+  padding-top: 120%;
+  
+  transition: width .2s ease-out, padding-top .2s ease-out;
+}
+
+.mybutton.white {
+  background-color: #fff;
+}
+
+.mybutton.white:hover, .mybutton.white:focus {
+  background-color: rgb(230,230,230);
+}
+
+.wiggle:hover {
+  animation: wiggle 1s ease;
+  animation-iteration-count: 1;
+}
+h2{
+	color:white;
+}
+.elementToFadeInAndOut {
+    width:100%;
+    height:100%;
+    z-index:2;
+    /*background: red;*/
+    -webkit-animation: fadeinout 4s linear forwards;
+    animation: fadeinout 4s linear forwards;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.congrats{
+	position:absolute;
+	top:0;
+	width: 100%;
+	height:100%;
+}
+.display-none{
+	display:none;
+}
+
+@-webkit-keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+@keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+@keyframes wiggle {
+  20%  { transform: translateX(4px);  }
+  40%  { transform: translateX(-4px); }
+  60%  { transform: translateX(2px);  }
+  80%  { transform: translateX(-1px); }
+  100% { transform: translateX(0);    }
+}
