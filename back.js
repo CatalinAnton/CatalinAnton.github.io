@@ -46,6 +46,8 @@
 
     }
 
+
+
     function blend(){
 //     	#box1{
 // 	right:-70px;
@@ -57,6 +59,9 @@
 	box1.style.marginRight = "-50px";
 	var box2 = document.getElementById("box2");
 	box2.style.marginLeft = "-50px";
+	// box2.style.opacity= 0.5;
+	var halfbox1 = document.getElementById("halfbox1");
+	halfbox1.style.visibility="visible";
 
     }
 
@@ -66,7 +71,24 @@
 	box1.style.backgroundColor = 'rgba(' + Math.floor(Math.random() * 256)  +',' + Math.floor(Math.random() * 256) +',' +Math.floor(Math.random() * 256)+ ', 1)';
 	console.log("box1 este ", box1);
 	var box2 = document.getElementById( 'box2' );
-	box2.style.backgroundColor = 'rgba(' + Math.floor(Math.random() * 256)  +',' + Math.floor(Math.random() * 256) +',' +Math.floor(Math.random() * 256)+', 0.5)';
+	var halfbox2 = document.getElementById('halfbox2');
+	var halfbox1 = document.getElementById('halfbox1');	
+    var color2=  'rgba(' + Math.floor(Math.random() * 256)  +',' + Math.floor(Math.random() * 256) +',' +Math.floor(Math.random() * 256)+',1)';
+
+
+	// halfbox1.style.backgroundColor = color2;
+	halfbox2.style.backgroundColor = color2;
+	box2.style.backgroundColor = color2;
+    // var box2c = box2.cloneNode(true);
+    // box2c.style.marginTop = 0;
+    // box2c.style.marginRight = 0;
+    // box2c.style.marginLeft = 0;
+    // box2c.style.marginBottom = 0;
+    // box2.appendChild(box2c);
+
+
+  //  box2.innerHTML ='#box2:before { background: ' + color2 + ';}'; 
+; 
 
 	if(box1.style.marginRight == "-50px"){box1.style.marginRight = "20px"};
 	if(box2.style.marginLeft == "-50px"){box2.style.marginLeft = "20px"};
@@ -89,6 +111,8 @@
 
 	var box3= document.getElementById('newcol');
 	box3.style[0] = "background-color";
+	halfbox1.style.backgroundColor = 'rgba(' + r + ',' + g + ',' + b + ', 1)';
+	halfbox1.style.visibility="hidden";
 	box3.style.backgroundColor = 'rgba(' + r + ',' + g + ',' + b + ', 1)';
 
 	var choice1 = document.getElementById( 'choice1' );
