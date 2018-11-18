@@ -32,6 +32,16 @@ h2 {
 	position:relative;
 	/*border:12px solid rgba(60,60,60,0.4);*/
 }
+.half-box{
+width:50%;
+height:100%;
+width: 50%;
+display: inline-block;
+float:left;
+z-index: 10;
+margin:0;
+padding:0;
+}
 
 .movable{
 	-webkit-transition:margin 1s;
@@ -42,6 +52,7 @@ h2 {
 	display:flex;
 	justify-content:center;
 }
+
 
 #box3{
 	border:2 px solid green;
@@ -156,6 +167,7 @@ h2{
 .display-none{
 	display:none;
 }
+
 
 @-webkit-keyframes fadeinout {
   0%,100% { opacity: 0; }
