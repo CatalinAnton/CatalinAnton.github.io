@@ -10,7 +10,10 @@
 
 <div class="wrapper">
 	<div class="color-box movable" id="box1"></div>
-	<div class="color-box movable" id="box2"></div>
+	<div class="color-box movable" id="box2">
+		<div class="half-box" id="halfbox1"></div>
+		<div class="half-box" id="halfbox2"></div>
+	</div>
 	<div class="color-box" id="newcol"></div>
 </div>
 <div class="wrapper">
@@ -33,6 +36,25 @@
   <input type="color" name="favcolor" value="#ff0000">
   <input type="submit">
 </form> -->
+<!-- <div id="demo">
+</div> -->
+<script>
+var x = document.getElementById("demo");
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+function showPosition(position) {
+    var latlon = position.coords.latitude + "," + position.coords.longitude;
+	console.log(latlon);
 
+    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+ }
+// getLocation();
+// showPosition();
+</script> 
 </body>
 </html>
